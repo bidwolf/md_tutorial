@@ -18,4 +18,66 @@ Isso pode te assustar um pouco é claro, mas saiba que ela continua funcionando 
 
 ### 2. Listas
 
-* Existem basicamente 2 tipos de listas possíveis, *_Ordenada_* e *_Não-Ordenada_*
+---
+
+* Existem basicamente 2 tipos de listas possíveis, *_Ordenada_* e *_Não-Ordenada_*. As listas ordenadas são utilizadas com os caracteres **"1. (ou número ponto espaço")** e listas não ordenadas são criadas a partir dos caracteres **"- ","+ ","\* "(ou traço espaço,mais espaço,asterísco espaço)**
+
+#### Listas não-ordenadas
+
+---
+
+* A regra [md004](https://github.com/DavidAnson/markdownlint/blob/v0.23.1/doc/Rules.md#md004) , explica que listas não ordenadas não devem mesclar símbolos diferentes para a mesma lista.
+  * Isso vale também para os subníveis.
+  * As regras [md005](https://github.com/DavidAnson/markdownlint/blob/v0.23.1/doc/Rules.md#md005), e  [md007](https://github.com/DavidAnson/markdownlint/blob/v0.23.1/doc/Rules.md#md004) relacionam a identação da lista, determinando a diferença de espaços para cada subnível como 2 espaços e a quantidade em um mesmo subnível não pode ser diferente.
+
+### CheckLists
+
+---
+
+ Um exemplo de lista não ordenada são as checklists, elas são utilizadas para destacar tópicos com *checkbox*.
+
+- [ ] Caixa sem seleção
+
+- [ ] Caixa selecionada
+
+#### Listas ordenadas
+
+---
+
+1. esse é um exemplo de lista ordenada
+1. Nessa lista eu utilizei o inicio de todos os itens como *"1. "*.
+
+    1. Sub-lista ordenada.
+    2. Aqui eu enumero a lista como 1.2.3.... em cada item da lista.
+
+1. Utilizar 1->3-> 2 como índice de uma lista ordenada fere a regra [md029](https://github.com/DavidAnson/markdownlint/blob/v0.23.1/doc/Rules.md#md029).
+
+### 3. Links, imagens e coisinhas a mais
+
+---
+
+* Para criar links se deve utilizar a sintaxe:
+
+        (texto do link)+[endereço do link].
+
+    ou:
+
+        "(texto do link)"+[ref]
+
+        "[ref]":image.jpg "Texto opcional"
+
+* Para criar links com referências a imagens deve ser utilizada a sintaxe:
+
+        "![Alternate text]"+"(image.jpg)"
+
+    ou:
+
+        "![Alternate text]"+"[ref]"
+
+        "[ref]":image.jpg "Texto opcional"
+
+<img src="kaminari.jpg" width= "200" description="Imagem contendo o personagem de boku no hero Academy Kaminari sorrindo">
+
+* Para criar um texto com fundo escuro basta utilizar TAB+TAB
+
+        O texto fica assim.
