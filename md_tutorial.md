@@ -81,3 +81,21 @@ Isso pode te assustar um pouco é claro, mas saiba que ela continua funcionando 
 * Para criar um texto com fundo escuro basta utilizar TAB+TAB
 
         O texto fica assim.
+
+---
+
+### 4. Códigos
+
+Para adicionar códigos basta adicionar *crase*.
+
+        `var fruta="banana" //linha de código`
+`var fruta="banana" //linha de código`
+
+```js
+fruta="banana";
+```
+
+        \```js
+        fruta="banana";
+        \```
+ .
