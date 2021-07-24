@@ -5,14 +5,16 @@ Entenda primeiramente, que existem [regras](https://github.com/DavidAnson/markdo
 
 Isso pode te assustar um pouco é claro, mas saiba que ela continua funcionando mesmo que você cometa alguns erros.
 
-## 1. Headers
+<h2 id="id_headers"> 1. Headers</h2>
+
+---
 
 * Para começar saiba que utilizar caracteres # criam _headers_ e seus níveis se dão de acordo com o número de # que você coloca no arquivo.
 * Ao criar *headers* deve-se seguir a ordem de headers utilizados não podendo pular do **nível 1 (#)** para o **nível 2 (##)** como diz a regra [md001](https://github.com/DavidAnson/markdownlint/blob/v0.23.1/doc/Rules.md#md001)
 
 * Também podemos criar _headers_ utilizando **"=========" para nível 1**, e **"---------" para nível 2**, _headers_ de nível 3 continuam utilizando **###**.
 
-## 2. Listas
+<h2 id="Listas"> 2. Listas</h2>
 
 ---
 
@@ -48,7 +50,7 @@ Isso pode te assustar um pouco é claro, mas saiba que ela continua funcionando 
 
 1. Utilizar 1->3-> 2 como índice de uma lista ordenada fere a regra [md029](https://github.com/DavidAnson/markdownlint/blob/v0.23.1/doc/Rules.md#md029).
 
-## 3. Links, imagens e coisinhas a mais
+<h2 id="id_links"> 3. Links, imagens e coisinhas a mais</h2>
 
 ---
 
@@ -60,7 +62,7 @@ ou:
 >
 >        "(texto do link)"+[ref]
 >
->        "[ref]":image.jpg "Texto opcional"
+>        "[ref]":link
 
 * Para criar links com referências a imagens deve ser utilizada a sintaxe:
 >
@@ -73,13 +75,35 @@ ou:
 >       "[ref]":image.jpg "Texto opcional"
 > <img src="kaminari.jpg" width= "200" description="Imagem contendo o personagem de boku no hero Academy Kaminari sorrindo">
 
-* Para criar um texto com fundo escuro basta utilizar TAB+TAB
+* Para adicionar um título ao link da imagem ou link normal, basta adicionar um texto entre aspas duplas nos parênteses do link após o link
 
->        O texto fica assim.
+        Exemplo: [Google](www.google.com "este é 
+        um link para o site da google")
+
+[Google](www.google.com "Este é um link para o site da google")
+
+* Equivalente a :
+
+```html
+<a>href="www.google.com" Google title="Este é um link para o site da google"</a>
+```
+
+* Para adicionar emails ou links rápidos basta colocá-los entre os caractéres **"<>"**
+
+Envie um email para <tec.henriquedepaula@gmail.com>
+
+        Equivalente a [tec.henriquedepaula@gmail.com](mailto:tec.henriquedepaula@gmail.com)
+
+* Para adicionar um link no próprio documento, basta utilizar o id do elemento no link utilizando **_("#" +"id_elemento")_**
+**Exemplo:** [Capitulo 1](#id_headers)
+
+   *Nota: Não é possível adicionar id, class ou outros aspectos de metadados em markdown, para solucionar isso basta definir o elemento em html.*
 
 ---
 
-## 4. Códigos
+<h2 id="id_codigos">4. Códigos</h2>
+
+---
 
 Para adicionar códigos basta adicionar *crase*.
 
@@ -94,7 +118,17 @@ fruta="banana";
 >       fruta="banana";
 >       ```
 
-## 5. TABELAS
+```html
+<html>
+   <head>
+      <title>Meu titulo</title>
+   </head>
+</html>
+```
+
+<h2 id="id_tabelas">5. TABELAS</h2>
+
+---
 
 1. Coloque os nomes das colunas da tabela e os separe utilizando o caractére " **|** ".
 
@@ -137,3 +171,64 @@ Pijack | lane do topo |10%
 propositalmente | lane do topo | 50%
 
 ---
+
+<h2 id="id_textos">6. Mexendo com textos </h2>
+
+---
+
+Para utilizar recursos textuais de destaque é muito simples, e trivial, provavelmente você já utilizou muitos desses recursos em alguns apps, então esse capítulo vai ser bem menos explicativo e bem mais demonstrativo.
+
+### Blackotes
+
+---
+
+ Normalmente utilizados para citar um texto inferior, os chamados blackquotes
+>Aqui eu utilizo um ">"
+>
+> E utilizando um ">" numa nova linha em branco
+>
+> posso escrever outras linhas entre os blackotes, que começarem com >.
+
+### Textos diferenciados
+
+---
+
+1. Dá pra cortar o texto usando ~~ no início e no final da frase
+ ~~desse jeito~~
+
+1. Dá pra mesclar efeitos de textos:
+~~**Texto cortado em negrito**~~
+1. Dá pra usar emojis :monkey: mas só em alguns interpretadores de markdown. Uma referência para alguns emojis está [Aqui](ref)
+
+[ref]:https://gist.github.com/rxaviers/7360908
+ Esse eu nem sei o nome mas ele é mais bonito, porém ele ignora espaços em branco e caracteres que não sejam alfanuméricos
+
+  Não é afetado por efeitos em negrito ou itálico, mas dá pra colocar entre blackotes, para usar:"$\$texto$$"
+  >$$Henrique$$
+
+* Não funciona no github (24/07/2021)
+
+* _é considerado um heading_
+
+### Hipertextos em Headers e notas de rodapé
+
+---
+
+Hipertextos em headers podem ser utilizados em linguagens markdown, mas esse recurso ainda não pode ser utilizado no github.
+
+Para isso, é colocado um id entre chaves referente ao título, dai pra frente é só referenciar esse id como se referencia links normais.
+
+        ## TITULO 1{#id_titulo1}
+
+        essa é uma referencia ao [título 1](#id_titulo1)
+rodapé [²] outro  rodapé [³]
+
+        Sintaxe: Qualquer texto [^índice do rodapé] mais texto
+        [^índice do rodapé]: Nota
+
+[²]: like
+
+[³]: that
+
+This is some text with a footnote.[^2] And a
+Or inline:

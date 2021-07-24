@@ -1,10 +1,14 @@
 {
     "cSpell.ignoreWords": [
+        "blackotes",
+        "blackquotes",
         "boku",
+        "codigos",
         "description",
+        "id",
         "kaminari",
         "pijack",
         "winrate"
     ],
-    "workbench.editor.enablePreview": false
+    "workbench.editor.enablePreview": true
 }
