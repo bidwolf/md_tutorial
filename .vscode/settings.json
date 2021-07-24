@@ -2,6 +2,9 @@
     "cSpell.ignoreWords": [
         "boku",
         "description",
-        "kaminari"
-    ]
+        "kaminari",
+        "pijack",
+        "winrate"
+    ],
+    "workbench.editor.enablePreview": false
 }
