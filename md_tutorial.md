@@ -214,14 +214,34 @@ Para utilizar recursos textuais de destaque é muito simples, e trivial, provave
 
 ---
 
-Hipertextos em headers podem ser utilizados em linguagens markdown, mas esse recurso ainda não pode ser utilizado no github.
+Hipertextos em headers podem ser utilizados em linguagens markdown e existem algumas formas de se fazer isso.
 
-Para isso, é colocado um id entre chaves referente ao título, dai pra frente é só referenciar esse id como se referencia links normais.
+1. É colocado um id entre chaves referente ao título, dai pra frente é só referenciar esse id como se referencia links normais.
 
         ## TITULO 1{#id_titulo1}
 
         essa é uma referencia ao [título 1](#id_titulo1)
-rodapé [²] outro  rodapé [³]
+1. Substituindo o header com "#" pelo seu equivalente em html, e adicionando `id="id_anyHeader"` entre sua tag.
+1. Mesclando o nível do header com sua tag html adicionando-a posteriormente ao header com o id sugerido: `## ANY HEADER H2 <h2>id="id_anyHeader"</h2>`.
+
+[capítulo 6](#id_textos).
+
+``` html
+
+## capitulo 6<h2 id="id_textos"></h2>`
+```
+
+        [capítulo 6](#id_textos)
+
+1. Referenciando o título em um link substituindo o id pelo titulo com hifens ao invés de espaços em branco.
+[capítulo 6](#textos-diferenciados).
+
+        [capítulo 6](#textos-diferenciados)
+
+### Rodapés
+
+Para criar um rodapé como esse
+rodapé [²] ou esse outro  rodapé [³] basta seguir a seguinte sintaxe:'
 
         Sintaxe: Qualquer texto [^índice do rodapé] mais texto
         [^índice do rodapé]: Nota
@@ -229,6 +249,3 @@ rodapé [²] outro  rodapé [³]
 [²]: like
 
 [³]: that
-
-This is some text with a footnote.[^2] And a
-Or inline:
