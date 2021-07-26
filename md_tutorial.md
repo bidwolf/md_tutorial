@@ -5,7 +5,7 @@ Entenda primeiramente, que existem [regras](https://github.com/DavidAnson/markdo
 
 Isso pode te assustar um pouco é claro, mas saiba que ela continua funcionando mesmo que você cometa alguns erros.
 
-## 1. Headers<h2 id="id_headers"></h2>
+## 1. Headers
 
 ---
 
@@ -14,7 +14,7 @@ Isso pode te assustar um pouco é claro, mas saiba que ela continua funcionando 
 
 * Também podemos criar _headers_ utilizando **"=========" para nível 1**, e **"---------" para nível 2**, _headers_ de nível 3 continuam utilizando **###**.
 
-## 2. Listas<h2 id="id_listas"></h2>
+## 2. Listas
 
 ---
 
@@ -50,7 +50,7 @@ Isso pode te assustar um pouco é claro, mas saiba que ela continua funcionando 
 
 1. Utilizar 1->3-> 2 como índice de uma lista ordenada fere a regra [md029](https://github.com/DavidAnson/markdownlint/blob/v0.23.1/doc/Rules.md#md029).
 
-## 3. Links, imagens e coisinhas a mais<h2 id="id_links"</h2>
+## 3. Links, imagens e coisinhas a mais
 
 ---
 
@@ -101,7 +101,7 @@ Envie um email para <tec.henriquedepaula@gmail.com>
 
 ---
 
-## 4. Códigos<h2 id="id_codigos"</h2>
+## 4. Códigos
 
 ---
 
@@ -126,7 +126,7 @@ fruta="banana";
 </html>
 ```
 
-## 5. TABELAS<h2 id="id_tabelas"</h2>
+## 5. TABELAS
 
 ---
 
@@ -172,7 +172,7 @@ propositalmente | lane do topo | 50%
 
 ---
 
-## 6. Mexendo com textos <h2 id="id_textos"></h2>
+## 6. Mexendo com textos
 
 ---
 
@@ -214,34 +214,14 @@ Para utilizar recursos textuais de destaque é muito simples, e trivial, provave
 
 ---
 
-Hipertextos em headers podem ser utilizados em linguagens markdown e existem algumas formas de se fazer isso.
+Hipertextos em headers podem ser utilizados em linguagens markdown, mas esse recurso ainda não pode ser utilizado no github.
 
-1. É colocado um id entre chaves referente ao título, dai pra frente é só referenciar esse id como se referencia links normais.
+Para isso, é colocado um id entre chaves referente ao título, dai pra frente é só referenciar esse id como se referencia links normais.
 
         ## TITULO 1{#id_titulo1}
 
         essa é uma referencia ao [título 1](#id_titulo1)
-1. Substituindo o header com "#" pelo seu equivalente em html, e adicionando `id="id_anyHeader"` entre sua tag.
-1. Mesclando o nível do header com sua tag html adicionando-a posteriormente ao header com o id sugerido: `## ANY HEADER H2 <h2>id="id_anyHeader"</h2>`.
-
-[capítulo 6](#id_textos).
-
-``` html
-
-## capitulo 6<h2 id="id_textos"></h2>`
-```
-
-        [capítulo 6](#id_textos)
-
-1. Referenciando o título em um link substituindo o id pelo titulo com hifens ao invés de espaços em branco.
-[capítulo 6](#textos-diferenciados).
-
-        [capítulo 6](#textos-diferenciados)
-
-### Rodapés
-
-Para criar um rodapé como esse
-rodapé [²] ou esse outro  rodapé [³] basta seguir a seguinte sintaxe:'
+rodapé [²] outro  rodapé [³]
 
         Sintaxe: Qualquer texto [^índice do rodapé] mais texto
         [^índice do rodapé]: Nota
@@ -249,3 +229,6 @@ rodapé [²] ou esse outro  rodapé [³] basta seguir a seguinte sintaxe:'
 [²]: like
 
 [³]: that
+
+This is some text with a footnote.[^2] And a
+Or inline:
