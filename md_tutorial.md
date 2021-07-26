@@ -5,7 +5,7 @@ Entenda primeiramente, que existem [regras](https://github.com/DavidAnson/markdo
 
 Isso pode te assustar um pouco é claro, mas saiba que ela continua funcionando mesmo que você cometa alguns erros.
 
-<h2 id="id_headers"> 1. Headers</h2>
+## 1. Headers</h2>
 
 ---
 
@@ -14,7 +14,7 @@ Isso pode te assustar um pouco é claro, mas saiba que ela continua funcionando 
 
 * Também podemos criar _headers_ utilizando **"=========" para nível 1**, e **"---------" para nível 2**, _headers_ de nível 3 continuam utilizando **###**.
 
-<h2 id="Listas"> 2. Listas</h2>
+## 2. Listas</h2>
 
 ---
 
@@ -50,7 +50,7 @@ Isso pode te assustar um pouco é claro, mas saiba que ela continua funcionando 
 
 1. Utilizar 1->3-> 2 como índice de uma lista ordenada fere a regra [md029](https://github.com/DavidAnson/markdownlint/blob/v0.23.1/doc/Rules.md#md029).
 
-<h2 id="id_links"> 3. Links, imagens e coisinhas a mais</h2>
+## 3. Links, imagens e coisinhas a mais</h2>
 
 ---
 
@@ -101,7 +101,7 @@ Envie um email para <tec.henriquedepaula@gmail.com>
 
 ---
 
-<h2 id="id_codigos">4. Códigos</h2>
+## Códigos</h2>
 
 ---
 
@@ -126,7 +126,7 @@ fruta="banana";
 </html>
 ```
 
-<h2 id="id_tabelas">5. TABELAS</h2>
+## TABELAS</h2>
 
 ---
 
@@ -172,7 +172,7 @@ propositalmente | lane do topo | 50%
 
 ---
 
-<h2 id="id_textos">6. Mexendo com textos </h2>
+## Mexendo com textos </h2>
 
 ---
 
